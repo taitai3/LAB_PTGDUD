@@ -1,0 +1,184 @@
+.footer {
+  background: #1a1a2e;
+  border-radius: 12px;
+  margin: 0 60px 40px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.inner {
+  display: flex;
+  gap: 40px;
+  padding: 40px 40px 32px;
+}
+
+.aboutCol {
+  flex: 0 0 320px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.col {
+  flex: 0 0 180px;
+}
+
+.colTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.colTitleSpaced {
+  margin-top: 28px;
+}
+
+.aboutText {
+  font-size: 13px;
+  color: #9CA3AF;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 280px;
+}
+
+.emailForm {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 9px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #fff;
+  font-size: 13px;
+  color: #374151;
+  outline: none;
+  max-width: 220px;
+}
+
+.emailInput::placeholder {
+  color: #9CA3AF;
+}
+
+.sendBtn {
+  padding: 9px 20px;
+  background: var(--pink);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.sendBtn:hover {
+  background: var(--pink-hover);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linkList a {
+  font-size: 13px;
+  color: #9CA3AF;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.linkList a:hover {
+  color: #fff;
+}
+
+/* Bottom bar */
+.bottomBar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoImg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.legal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legal a {
+  font-size: 12px;
+  color: #6B7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.legal a:hover {
+  color: #fff;
+}
+
+.separator {
+  font-size: 12px;
+  color: #4B5563;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin: 0 16px 24px;
+  }
+
+  .inner {
+    flex-direction: column;
+    padding: 28px 24px 20px;
+    gap: 28px;
+  }
+
+  .aboutCol,
+  .col {
+    flex: none;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .bottomBar {
+    flex-wrap: wrap;
+    padding: 14px 24px;
+    gap: 10px;
+  }
+}
