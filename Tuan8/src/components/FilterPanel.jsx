@@ -203,6 +203,12 @@ export default function FilterPanel({ filters, onChange }) {
           </div>
         )}
       </div>
+
+      <div className={styles.applyWrapper}>
+        <button className={styles.applyBtn} onClick={() => onChange({ ...filters })}>
+          Apply
+        </button>
+      </div>
     </aside>
   )
 }

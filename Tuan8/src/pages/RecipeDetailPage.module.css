@@ -1,0 +1,323 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.main {
+  flex: 1;
+  padding: 40px 60px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.breadcrumbLink {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: var(--pink);
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.breadcrumbLink:hover {
+  opacity: 0.75;
+}
+
+.breadcrumbSep {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.breadcrumbCurrent {
+  font-size: 14px;
+  color: var(--text-gray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px;
+}
+
+/* Layout */
+.content {
+  display: flex;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+/* Left column */
+.leftCol {
+  flex: 0 0 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 88px;
+}
+
+.imgWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.metaTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: var(--pink-light);
+  border: 1px solid var(--pink-border);
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.actionRow {
+  display: flex;
+  gap: 12px;
+}
+
+.bookmarkBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--pink);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bookmarkBtn:hover {
+  background: var(--pink-hover);
+}
+
+.bookmarkActive {
+  background: #c94d7a;
+}
+
+.youtubeBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ff0000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.youtubeBtn:hover {
+  background: #cc0000;
+}
+
+/* Right column */
+.rightCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+/* Info row */
+.infoRow {
+  display: flex;
+  gap: 32px;
+  padding: 20px 24px;
+  background: var(--bg-gray);
+  border-radius: 12px;
+  margin-bottom: 36px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLabel {
+  font-size: 12px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.infoValue {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Sections */
+.section {
+  margin-bottom: 36px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--pink-light);
+}
+
+/* Ingredients */
+.ingredientGrid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 24px;
+}
+
+.ingredientItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  padding: 8px 12px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pink);
+  flex-shrink: 0;
+}
+
+.ingredientMeasure {
+  color: var(--pink);
+  font-weight: 600;
+  min-width: 60px;
+  font-size: 13px;
+}
+
+.ingredientName {
+  color: var(--text-dark);
+  font-size: 13px;
+}
+
+/* Instructions */
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.instructionStep {
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.8;
+  padding: 14px 16px;
+  background: #fafafa;
+  border-radius: 8px;
+  border-left: 3px solid var(--pink);
+}
+
+/* Loading */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+  gap: 20px;
+  color: var(--text-gray);
+  font-size: 15px;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--border);
+  border-top-color: var(--pink);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.backBtn {
+  background: var(--pink);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .main {
+    padding: 24px 20px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .leftCol {
+    flex: none;
+    position: static;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .ingredientGrid {
+    grid-template-columns: 1fr;
+  }
+}
